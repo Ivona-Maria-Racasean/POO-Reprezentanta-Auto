@@ -6,30 +6,27 @@
 #define REPREZENTANTA_AUTO_REVIZIE_H
 
 #include <string>
-#include "rep_auto.h"
 #include "masina.h"
 #include <vector>
+
 class rep_auto;
+
 class masina;
 
 class revizie {
-  //  rep_auto reprezentanta;
-  //  masina m;
+
+    masina m;
     int pret;
-    std::vector<rep_auto> reparatii;
-    std::vector<masina> masini;
 
 public:
+    revizie() = default;
 
-   revizie(int pret) : pret(pret){};
+    revizie(const masina &m, int pret);
 
-   revizie() = default;
+    int get_pret() const;
 
     ~revizie() = default;
 
-    void citire();
-    static void afisare();
-
-
 };
+
 #endif //REPREZENTANTA_AUTO_REVIZIE_H

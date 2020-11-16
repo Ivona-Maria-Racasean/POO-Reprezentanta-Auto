@@ -1,11 +1,29 @@
-500
-Bucuresti
-30000
 Skoda
-Str. Aviatorilor
+Str.Aviatorilor
 34
+Bucuresti
+
+Peugeot
+Str.Mincu
+102
+Ploiesti
+
 Octavia
-Gri
-7500
 Diesel
-1.9 Tdi
+1.9Tdi
+gri
+
+Fabia
+Benzina
+2.0tdi
+rosu
+
+SUV3008
+Diesel
+2.0Hdi
+negru
+
+
+
+
+

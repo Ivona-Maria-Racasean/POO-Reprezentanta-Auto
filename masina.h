@@ -7,14 +7,15 @@
 
 #include <string>
 #include <vector>
-#include "revizie.h"
+//#include "revizie.h"
 
 class masina {
     std::string nume, tip_combustibil, motor, culoare;
     int pret;
     friend class revizie;
 public:
-    masina() = default;
+
+    //masina() = default;
 
     ~masina() = default;
 
