@@ -8,16 +8,19 @@ Str.Mincu
 102
 Ploiesti
 
+1000
 Octavia
 Diesel
 1.9Tdi
 gri
 
+1500
 Fabia
 Benzina
 2.0tdi
-rosu
+rosie
 
+2000
 SUV3008
 Diesel
 2.0Hdi

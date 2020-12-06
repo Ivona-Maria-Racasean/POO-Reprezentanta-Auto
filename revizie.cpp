@@ -1,4 +1,3 @@
-
 #include "revizie.h"
 
 int revizie::get_pret() const {
@@ -6,3 +5,7 @@ int revizie::get_pret() const {
 }
 
 revizie::revizie(const masina &m, int pret) : m(m), pret(pret) {}
+
+
+
+

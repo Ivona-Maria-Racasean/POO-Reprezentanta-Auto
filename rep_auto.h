@@ -1,4 +1,3 @@
-
 #ifndef REPREZENTANTA_AUTO_REP_AUTO_H
 #define REPREZENTANTA_AUTO_REP_AUTO_H
 
@@ -16,8 +15,6 @@ class rep_auto {
 
     std::vector<revizie> revizii;
 
-    friend class masina;
-
 public:
 
     int getVenitAnual() const;
@@ -28,8 +25,6 @@ public:
 
     void repara(const revizie &r);
 
-    //void adauga(revizie &pret);
-
     ~rep_auto() = default;
 
     friend std::istream &operator>>(std::istream &, rep_auto &);
@@ -37,7 +32,6 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const rep_auto &rep_auto);
 
     rep_auto &operator=(const rep_auto &rep_auto);
-
 
 };
 
