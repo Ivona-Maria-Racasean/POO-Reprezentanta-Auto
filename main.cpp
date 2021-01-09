@@ -12,8 +12,9 @@ Clasa  va avea un constructor implicit, un constructor cu argumente si un constr
 // "pret" din clasa "revizie" reprezinta pretul reviziei, iar "costrep" din clasa "masina" reprezinta costul reparatiei in urma reviziei
 
 //o sa fac o mosternire pt clasa revizie numita "tip_revizie", functia get_pret o fac virtuala, iar in mostenire
-// fac pt fiecare tip de revizie (anulaa, lunara etc) cate o formula pt a calcula pretul, apoi in rep_auto unde se calc venitul anual, schimb
-//ca sa primeasca noua valoare din derivata.
+// fac pt fiecare tip de revizie (anuala, lunara etc) cate o formula pt a calcula pretul si modific functia 'repara' din 'rep_auto'
+
+//sper ca e totul ok pt tema 2, trebuie sa mai modific la afisare putin, sa se afiseze mai frumos
 
 int main() {
 
