@@ -14,11 +14,12 @@ std::istream &operator>>(std::istream &f, masina &masina) {
         f >> masina.culoare;
         std::cout << "Costul reparatiei masinii " << masina.nume << " este " << masina.costrep << '\n';
         masina.masini.emplace_back(masina);
+        r.repara(masina);
     }
     catch (std::invalid_argument &e) {
         std::cout << e.what() << '\n';
     }
-    r.exceptie(masina);
+
 
     return f;
 
@@ -33,10 +34,3 @@ std::ostream &operator<<(std::ostream &os, const masina &masina) {
 int masina::get_costrep() const {
     return costrep;
 }
-
-
-
-
-
-
-

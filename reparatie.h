@@ -5,12 +5,10 @@
 
 class reparatie {   // initial am vrut sa fac aceasta clasa ca fiind o derivata din clasa "revizie"
                     //dar am facut o compunere
-    int costrep;
-
 public:
     reparatie() = default;
 
-    void exceptie(masina &m);
+    void repara(masina &m);
 
 };
 

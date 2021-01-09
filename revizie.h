@@ -9,16 +9,16 @@ class masina;
 
 class revizie {
 
-protected:
     masina m;
-protected:
-    int pret;
+    int pret, id;
+protected:    int costr=0;
 public:
     revizie() = default;
 
-    revizie(const masina &m, int pret);
+    revizie(const masina &m, int pret, int id);
 
-    int get_pret() const;
+    virtual int get_pret() const;
+    virtual int get_id() const;
 
     ~revizie() = default;
 };

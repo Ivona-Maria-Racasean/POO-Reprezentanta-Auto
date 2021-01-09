@@ -3,9 +3,11 @@
 
 #include <string>
 #include "revizie.h"
+#include "tip_revizie.h"
 #include <vector>
 
 class revizie;
+//class tip_revizie;
 
 class rep_auto {
 
@@ -23,7 +25,7 @@ public:
 
     rep_auto(std::string nume1, std::string strada1, int nr, std::string loc1);
 
-    void repara(const revizie &r);
+    void repara(const revizie &r, tip_revizie &t);
 
     ~rep_auto() = default;
 
@@ -34,6 +36,4 @@ public:
     rep_auto &operator=(const rep_auto &rep_auto);
 
 };
-
-
 #endif //REPREZENTANTA_AUTO_REP_AUTO_H

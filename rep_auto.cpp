@@ -2,6 +2,8 @@
 #include <iostream>
 #include "rep_auto.h"
 #include "reparatie.h"
+#include "tip_revizie.h"
+
 
 
 int rep_auto::getVenitAnual() const {
@@ -18,7 +20,6 @@ rep_auto::rep_auto(std::string nume1, std::string strada1, int nr, std::string l
 
 std::istream &operator>>(std::istream &f, rep_auto &repr) {
     f >> repr.denumire >> repr.strada >> repr.nr >> repr.localitate;
-    // f>>repr.r;
     return f;
 }
 
@@ -36,12 +37,12 @@ std::ostream &operator<<(std::ostream &os, const rep_auto &rep_auto) {
     return os;
 }
 
-void rep_auto::repara(const revizie &r) {
+void rep_auto::repara(const revizie &r,  tip_revizie &t) {
     this->revizii.push_back(r);
-    this->venit_anual += r.get_pret();
-
+    int costr = 0;
+    t.calcul_pret(r,costr);
+    std :: cout << "Clientul va plati pe an suma: " << costr <<'\n';
+    this->venit_anual += costr;
 }
-
-
 
 

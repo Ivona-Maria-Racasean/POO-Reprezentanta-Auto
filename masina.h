@@ -18,11 +18,11 @@ public:
 
     masina() = default;
 
-    ~masina() = default;
-
     friend std::ostream &operator<<(std::ostream &os, const masina &masina);
 
     friend std::istream &operator>>(std::istream &f, masina &masina);
+
+    ~masina() = default;
 
     int get_costrep() const;
 };

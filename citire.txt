@@ -20,13 +20,8 @@ Benzina
 2.0tdi
 rosie
 
-2000
+20000
 SUV3008
 Diesel
 2.0Hdi
 negru
-
-
-
-
-
