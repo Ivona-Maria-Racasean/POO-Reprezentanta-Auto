@@ -1,39 +1,37 @@
-#ifndef REPREZENTANTA_AUTO_REP_AUTO_H
-#define REPREZENTANTA_AUTO_REP_AUTO_H
+    #ifndef REPREZENTANTA_AUTO_REP_AUTO_H
+    #define REPREZENTANTA_AUTO_REP_AUTO_H
 
-#include <string>
-#include "revizie.h"
-#include "tip_revizie.h"
-#include <vector>
+    #include <string>
+    #include "revizie.h"
+    #include <vector>
 
-class revizie;
-//class tip_revizie;
+    class revizie;
 
-class rep_auto {
+    class rep_auto {
 
-    std::string denumire, strada, localitate;
+        std::string denumire, strada, localitate;
 
-    int nr = 0, venit_anual = 0;
+        int nr = 0, venit_anual = 0;
 
-    std::vector<revizie> revizii;
+        std::vector<revizie> revizii;
 
-public:
+    public:
 
-    int getVenitAnual() const;
+        int getVenitAnual() const;
 
-    rep_auto() = default;
+        rep_auto() = default;
 
-    rep_auto(std::string nume1, std::string strada1, int nr, std::string loc1);
+        rep_auto(std::string nume1, std::string strada1, int nr, std::string loc1);
 
-    void repara(const revizie &r, tip_revizie &t);
+        void repara(revizie &&r);
 
-    ~rep_auto() = default;
+        ~rep_auto() = default;
 
-    friend std::istream &operator>>(std::istream &, rep_auto &);
+        friend std::istream &operator>>(std::istream &, rep_auto &);
 
-    friend std::ostream &operator<<(std::ostream &os, const rep_auto &rep_auto);
+        friend std::ostream &operator<<(std::ostream &os, const rep_auto &rep_auto);
 
-    rep_auto &operator=(const rep_auto &rep_auto);
+        rep_auto &operator=(const rep_auto &rep_auto);
 
-};
-#endif //REPREZENTANTA_AUTO_REP_AUTO_H
+    };
+    #endif //REPREZENTANTA_AUTO_REP_AUTO_H

@@ -1,30 +1,32 @@
-#ifndef REPREZENTANTA_AUTO_MASINA_H
-#define REPREZENTANTA_AUTO_MASINA_H
+    #ifndef REPREZENTANTA_AUTO_MASINA_H
+    #define REPREZENTANTA_AUTO_MASINA_H
 
-#include <string>
-#include <vector>
+    #include <string>
+    #include <vector>
 
 
-class masina {
+    class masina {
 
-    int costrep;
-    std::string nume, tip_combustibil, motor, culoare;
+        int costrep;
+        std::string nume, tip_combustibil, motor, culoare;
 
-    std::vector<masina> masini;
+        std::vector<masina> masini;
 
-    friend class reparatie;
+        friend class reparatie;
 
-public:
+    public:
 
-    masina() = default;
+        masina() = default;
 
-    friend std::ostream &operator<<(std::ostream &os, const masina &masina);
+        masina(const masina &masina);
 
-    friend std::istream &operator>>(std::istream &f, masina &masina);
+        friend std::ostream &operator<<(std::ostream &os, const masina &masina);
 
-    ~masina() = default;
+        friend std::istream &operator>>(std::istream &f, masina &masina);
 
-    int get_costrep() const;
-};
+        ~masina() = default;
 
-#endif //REPREZENTANTA_AUTO_MASINA_H
+        int get_costrep() const;
+    };
+
+    #endif //REPREZENTANTA_AUTO_MASINA_H

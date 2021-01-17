@@ -1,26 +1,27 @@
-#ifndef REPREZENTANTA_AUTO_REVIZIE_H
-#define REPREZENTANTA_AUTO_REVIZIE_H
+    #ifndef REPREZENTANTA_AUTO_REVIZIE_H
+    #define REPREZENTANTA_AUTO_REVIZIE_H
 
-#include <string>
-#include "masina.h"
-#include <vector>
+    #include <string>
+    #include "masina.h"
+    #include <vector>
 
-class masina;
+    class masina;
 
-class revizie {
+    class revizie {
 
-    masina m;
-    int pret, id;
-protected:    int costr=0;
-public:
-    revizie() = default;
+        masina m;
+        int pret;
+    protected:    int costr{} ;
+    public:
+        revizie() = default;
 
-    revizie(const masina &m, int pret, int id);
+        revizie( const masina &m , int pret);
 
-    virtual int get_pret() const;
-    virtual int get_id() const;
+        virtual int get_pret() const;
 
-    ~revizie() = default;
-};
+        virtual void calcul_pret( revizie &r, int &costr);
 
-#endif //REPREZENTANTA_AUTO_REVIZIE_H
+        virtual ~revizie() = default;
+    };
+
+    #endif //REPREZENTANTA_AUTO_REVIZIE_H

@@ -1,13 +1,14 @@
-#include "revizie.h"
+    #include "revizie.h"
 
-int revizie::get_pret() const {
-    return pret;
-}
+    int revizie::get_pret() const {
+        return pret;
+    }
 
-int revizie::get_id() const {
-    return id;
-}
+    revizie::revizie(const masina &m, int pret) : m(m), pret(pret){}
 
-revizie::revizie(const masina &m, int pret, int id) : m(m), pret(pret), id(id){}
+    void revizie::calcul_pret(revizie &r, int &costr) {
+        costr = 0;
+
+    }
 
 
