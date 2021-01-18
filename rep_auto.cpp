@@ -5,6 +5,7 @@
     #include "revizie_lunara.h"
     #include "revizie_anuala.h"
     #include "revizie_bianuala.h"
+    #include "revizie.h"
 
 
     int rep_auto::getVenitAnual() const {
@@ -40,40 +41,35 @@
 
     void rep_auto::repara(revizie &&r) {
         this->revizii.push_back(r);
-        int costr = 0;
+        int costr ;
         int tip;
         std :: cout << "Tipul este: ";
         std :: cin >> tip;
         // tip = 1 -> Revizie lunara
         // tip = 2 -> Revizie bianuala
         // tip = 3 -> Revizie anuala
+        revizie *rv;
         switch(tip){
             case 1:{
                 std :: cout << "Revizie lunara" << '\n';
-                revizie_lunara rv;
-                rv.calcul_pret(r, costr);
-                std :: cout << "Clientul va plati pe an suma: " << costr <<'\n';
-                this->venit_anual += costr;
+                rv = new revizie_lunara;
             }
                 break;
             case 2:{
                 std :: cout << "Revizie bianuala" << '\n';
-                revizie_bianuala rv;
-                rv.calcul_pret(r, costr);
-                std :: cout << "Clientul va plati pe an suma: " << costr <<'\n';
-                this->venit_anual += costr;
+                rv = new revizie_bianuala;
             }
             break;
             case 3:{
                 std :: cout << "Revizie anuala"<< '\n';
-                revizie_anuala rv;
-                rv.calcul_pret(r, costr);
-                std :: cout << "Clientul va plati pe an suma: " << costr <<'\n';
-                this->venit_anual += costr;
+                rv = new revizie_anuala;
             }
             break;
-        }
 
+        }
+        rv -> calcul_pret(r, costr);
+        std :: cout << "Clientul va plati pe an suma: " << costr <<'\n';
+        this -> venit_anual += costr;
 
     }
 
