@@ -4,6 +4,7 @@
     #include <string>
     #include "masina.h"
     #include <vector>
+    #include "piesa_factory.h"
 
     class masina;
 
@@ -11,6 +12,7 @@
 
         masina m;
         int pret;
+
     protected:    int costr{} ;
     public:
         revizie() = default;
@@ -22,6 +24,7 @@
         virtual void calcul_pret( revizie &r, int &costr);
 
         virtual ~revizie() = default;
+
     };
 
     #endif //REPREZENTANTA_AUTO_REVIZIE_H

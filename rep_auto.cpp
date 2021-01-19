@@ -5,18 +5,10 @@
     #include "revizie_lunara.h"
     #include "revizie_anuala.h"
     #include "revizie_bianuala.h"
-    #include "revizie.h"
 
 
     int rep_auto::getVenitAnual() const {
         return venit_anual;
-    }
-
-    rep_auto::rep_auto(std::string nume1, std::string strada1, int nr, std::string loc1) {
-        denumire = std::move(nume1);
-        strada = std::move(strada1);
-        this->nr = nr;
-        localitate = std::move(loc1);
     }
 
 

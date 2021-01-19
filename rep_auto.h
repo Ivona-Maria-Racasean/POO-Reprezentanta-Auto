@@ -21,8 +21,6 @@
 
         rep_auto() = default;
 
-        rep_auto(std::string nume1, std::string strada1, int nr, std::string loc1);
-
         void repara(revizie &&r);
 
         ~rep_auto() = default;
