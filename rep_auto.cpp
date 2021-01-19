@@ -62,7 +62,7 @@
         rv -> calcul_pret(r, costr);
         std :: cout << "Clientul va plati pe an suma: " << costr <<'\n';
         this -> venit_anual += costr;
-
+        delete rv;
     }
 
 
