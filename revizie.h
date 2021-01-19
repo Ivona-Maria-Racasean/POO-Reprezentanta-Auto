@@ -4,7 +4,6 @@
     #include <string>
     #include "masina.h"
     #include <vector>
-    #include "piesa_factory.h"
 
     class masina;
 

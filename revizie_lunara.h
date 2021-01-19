@@ -7,7 +7,6 @@
     public:
         revizie_lunara() = default;
         void calcul_pret(revizie &r, int &costr) override;
-        //revizie_lunara(const revizie_lunara& rl) :
 
     };
 
